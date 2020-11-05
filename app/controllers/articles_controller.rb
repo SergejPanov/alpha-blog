@@ -20,6 +20,7 @@ before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def create
     @article = Article.new(article_params)
+    @article.user_id = Users.first
     if @article.save
       flash[:notice] = "Article was created successfully!"
       redirect_to article_path(@article)
