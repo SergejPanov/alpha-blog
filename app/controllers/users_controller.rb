@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         flash[:notice] = "You signed up successfully as #{@user.username}!"
         redirect_to articles_path
        else
-        render 'new'
+        render 'new' 
        end
     end
 
